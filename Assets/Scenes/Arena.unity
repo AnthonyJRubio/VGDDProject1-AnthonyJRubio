@@ -609,6 +609,11 @@ MonoBehaviour:
       type: 3}
     m_TimeToNextSpawn: 1
     m_NumberToSpawn: 0
+  - m_Name: FastGhostEnemy
+    m_EnemyGO: {fileID: 363551236594964142, guid: 70a2085e99a654f7aa81bf6bec1c9f9f,
+      type: 3}
+    m_TimeToNextSpawn: 10
+    m_NumberToSpawn: 10
 --- !u!4 &1564088068
 Transform:
   m_ObjectHideFlags: 0
@@ -835,12 +840,12 @@ PrefabInstance:
     - target: {fileID: 1240925322866323212, guid: 12214e4fdb891484b823f5076525b30e,
         type: 3}
       propertyPath: m_Offset.x
-      value: -1.5
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1240925322866323212, guid: 12214e4fdb891484b823f5076525b30e,
         type: 3}
       propertyPath: m_Offset.y
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1240925322866323212, guid: 12214e4fdb891484b823f5076525b30e,
         type: 3}
@@ -999,52 +1004,52 @@ PrefabInstance:
     - target: {fileID: 8455906031103297150, guid: 3d693253d3ab8424e8356c62001b7cd6,
         type: 3}
       propertyPath: m_Attacks.Array.data[0].m_Name
-      value: Laser
-      objectReference: {fileID: 0}
-    - target: {fileID: 8455906031103297150, guid: 3d693253d3ab8424e8356c62001b7cd6,
-        type: 3}
-      propertyPath: m_Attacks.Array.data[1].m_Name
       value: MegaLaser
       objectReference: {fileID: 0}
     - target: {fileID: 8455906031103297150, guid: 3d693253d3ab8424e8356c62001b7cd6,
         type: 3}
-      propertyPath: m_Attacks.Array.data[0].m_Button
-      value: Fire1
+      propertyPath: m_Attacks.Array.data[1].m_Name
+      value: Laser
       objectReference: {fileID: 0}
     - target: {fileID: 8455906031103297150, guid: 3d693253d3ab8424e8356c62001b7cd6,
         type: 3}
-      propertyPath: m_Attacks.Array.data[1].m_Button
+      propertyPath: m_Attacks.Array.data[0].m_Button
       value: Fire2
       objectReference: {fileID: 0}
     - target: {fileID: 8455906031103297150, guid: 3d693253d3ab8424e8356c62001b7cd6,
         type: 3}
+      propertyPath: m_Attacks.Array.data[1].m_Button
+      value: Fire1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8455906031103297150, guid: 3d693253d3ab8424e8356c62001b7cd6,
+        type: 3}
       propertyPath: m_Attacks.Array.data[0].m_Color.b
-      value: 0.80241585
+      value: 0.16078432
       objectReference: {fileID: 0}
     - target: {fileID: 8455906031103297150, guid: 3d693253d3ab8424e8356c62001b7cd6,
         type: 3}
       propertyPath: m_Attacks.Array.data[0].m_Color.g
-      value: 0
+      value: 0.16078432
       objectReference: {fileID: 0}
     - target: {fileID: 8455906031103297150, guid: 3d693253d3ab8424e8356c62001b7cd6,
         type: 3}
       propertyPath: m_Attacks.Array.data[0].m_Color.r
-      value: 1
+      value: 0.9529412
       objectReference: {fileID: 0}
     - target: {fileID: 8455906031103297150, guid: 3d693253d3ab8424e8356c62001b7cd6,
         type: 3}
       propertyPath: m_Attacks.Array.data[1].m_Color.b
-      value: 0.16078432
+      value: 0.80241585
       objectReference: {fileID: 0}
     - target: {fileID: 8455906031103297150, guid: 3d693253d3ab8424e8356c62001b7cd6,
         type: 3}
       propertyPath: m_Attacks.Array.data[1].m_Color.g
-      value: 0.16078432
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8455906031103297150, guid: 3d693253d3ab8424e8356c62001b7cd6,
         type: 3}
       propertyPath: m_Attacks.Array.data[1].m_Color.r
-      value: 0.9529412
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8455906031103297150, guid: 3d693253d3ab8424e8356c62001b7cd6,
         type: 3}
@@ -1054,7 +1059,7 @@ PrefabInstance:
     - target: {fileID: 8455906031103297150, guid: 3d693253d3ab8424e8356c62001b7cd6,
         type: 3}
       propertyPath: m_Attacks.Array.data[0].m_offset.y
-      value: 1.1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 8455906031103297150, guid: 3d693253d3ab8424e8356c62001b7cd6,
         type: 3}
@@ -1064,19 +1069,19 @@ PrefabInstance:
     - target: {fileID: 8455906031103297150, guid: 3d693253d3ab8424e8356c62001b7cd6,
         type: 3}
       propertyPath: m_Attacks.Array.data[1].m_offset.y
-      value: 1.2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8455906031103297150, guid: 3d693253d3ab8424e8356c62001b7cd6,
         type: 3}
       propertyPath: m_Attacks.Array.data[0].m_AbilityGO
       value: 
-      objectReference: {fileID: 2460057925500967565, guid: aa6a61c0765c3bb4489144fa3d628620,
+      objectReference: {fileID: 8486783592351315732, guid: 1394129545acecd47a1fc7d35de81c8f,
         type: 3}
     - target: {fileID: 8455906031103297150, guid: 3d693253d3ab8424e8356c62001b7cd6,
         type: 3}
       propertyPath: m_Attacks.Array.data[1].m_AbilityGO
       value: 
-      objectReference: {fileID: 8486783592351315732, guid: 1394129545acecd47a1fc7d35de81c8f,
+      objectReference: {fileID: 2460057925500967565, guid: aa6a61c0765c3bb4489144fa3d628620,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d693253d3ab8424e8356c62001b7cd6, type: 3}

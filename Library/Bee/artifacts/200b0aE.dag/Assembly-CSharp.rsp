@@ -364,6 +364,7 @@
 "Assets/Scripts/Misc/MainMenuController.cs"
 "Assets/Scripts/Misc/RotateAroundSelf.cs"
 "Assets/Scripts/Misc/ScoreManager.cs"
+"Assets/Scripts/Misc/SpeedPill.cs"
 "Assets/Scripts/Player/Abilities/Ability.cs"
 "Assets/Scripts/Player/Abilities/AbilityInfo.cs"
 "Assets/Scripts/Player/Abilities/LaserAttack.cs"

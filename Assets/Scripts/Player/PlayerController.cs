@@ -47,6 +47,12 @@ public class PlayerController : MonoBehaviour
 
     //Current amount of health that the player has
     private float p_CurHealth;
+
+    //Original speed of Player
+    private float p_OriginalSpeed;
+
+    // Amount of enemies killed
+    private int p_EnemiesKilled;
     #endregion
 
     #region Initialization
@@ -57,6 +63,8 @@ public class PlayerController : MonoBehaviour
         cr_Anim = GetComponent<Animator>();
         cr_Renderer = GetComponentInChildren<Renderer>();
         p_DefaultColor = cr_Renderer.material.color;
+        p_OriginalSpeed = m_Speed;
+        p_EnemiesKilled = 0;
 
         p_FrozenTimer = 0;
         p_CurHealth = m_MaxHealth;
@@ -119,8 +127,9 @@ public class PlayerController : MonoBehaviour
         //Updating the animation
         cr_Anim.SetFloat("Speed", Mathf.Clamp01(Mathf.Abs(forward) + Mathf.Abs(right)));
 
-        //updating velocity
+        //Updating velocity
         float moveThreshold = 0.3f;
+
 
         if (forward > 0 && forward < moveThreshold)
         {
@@ -181,6 +190,29 @@ public class PlayerController : MonoBehaviour
         }
         m_HUD.UpdateHealth(1.0f * p_CurHealth / m_MaxHealth);
     }
+
+    public void IncreaseSpeed(float amount)
+    {
+        if (m_Speed <= p_OriginalSpeed + 10f)
+        {
+            m_Speed += amount;
+        }
+    }
+
+    public void DecreaseSpeed(float amount)
+    {
+        if (m_Speed >= p_OriginalSpeed)
+        {
+            if (m_Speed - amount < p_OriginalSpeed)
+            {
+                m_Speed = p_OriginalSpeed;
+            }
+            else
+            {
+                m_Speed -= amount;
+            }
+        }
+    }
     #endregion
 
     #region Attack Methods
@@ -223,8 +255,13 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("HealthPill"))
         {
             IncreaseHealth(other.GetComponent<HealthPill>().HealthGain);
-            Destroy(other.gameObject);
+        } else if (other.CompareTag("SpeedPill"))
+        {
+            IncreaseSpeed(other.GetComponent<SpeedPill>().SpeedGain);
         }
+        p_EnemiesKilled++;
+        Destroy(other.gameObject);
+
     }
     #endregion
 }

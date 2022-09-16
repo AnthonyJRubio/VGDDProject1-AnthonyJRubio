@@ -227,8 +227,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.20914915, g: 0.5728415, b: 0.9433962, a: 1}
-      maxColor: {r: 0.495283, g: 0.99495536, b: 1, a: 1}
+      minColor: {r: 0.11764705, g: 0.9333329, b: 0.93333334, a: 1}
+      maxColor: {r: 0.36470592, g: 0.6559682, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4883,8 +4883,8 @@ MonoBehaviour:
   m_Speed: 1
   m_Damage: 0.1
   m_DeathExplosion: {fileID: 1751476858231362321}
-  m_HealthPillDropRate: 0.5
-  m_HealthPill: {fileID: 882635284410124364, guid: 65ebed16a83b049cd994974f686934ab,
+  m_PillTypeDropRate: 0.7
+  m_PillType: {fileID: 882635284410124364, guid: 65ebed16a83b049cd994974f686934ab,
     type: 3}
   m_Score: 2
 --- !u!114 &625438515
